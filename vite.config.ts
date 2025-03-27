@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [
     TanStackRouterVite({ target: 'react', autoCodeSplitting: true }),
     react()],
-    base: '/portfolio',
+    base: '/',
 })
