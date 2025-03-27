@@ -15,9 +15,9 @@ import {
 } from "@chakra-ui/react";
 import { FaCircle, FaMapMarkerAlt } from "react-icons/fa";
 
-import MainLayout from "../layouts/Main";
+import MainLayout from "../../layouts/Main";
 
-export const Route = createFileRoute("/experience")({
+export const Route = createFileRoute("/portfolio/experience")({
   component: RouteComponent,
 });
 

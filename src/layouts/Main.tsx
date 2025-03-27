@@ -22,12 +22,12 @@ import { Link } from "@tanstack/react-router";
 export default function MainLayout({ children }: { children: any }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Skills", href: "/skills" },
-    { label: "Experience", href: "/experience" },
-    { label: "Education", href: "/education" },
-    { label: "Volunteering", href: "/volunteering" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: "/portfolio/" },
+    { label: "Skills", href: "/portfolio/skills" },
+    { label: "Experience", href: "/portfolio/experience" },
+    { label: "Education", href: "/portfolio/education" },
+    { label: "Volunteering", href: "/portfolio/volunteering" },
+    { label: "Contact", href: "/portfolio/contact" },
   ];
 
   return (

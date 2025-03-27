@@ -16,9 +16,9 @@ import {
   FaBuilding,
 } from "react-icons/fa";
 
-import MainLayout from "../layouts/Main";
+import MainLayout from "../../layouts/Main";
 
-export const Route = createFileRoute("/education")({
+export const Route = createFileRoute("/portfolio/education")({
   component: RouteComponent,
 });
 

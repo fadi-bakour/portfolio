@@ -1,7 +1,7 @@
 "use client";
 
 import { createFileRoute } from "@tanstack/react-router";
-import MainLayout from "../layouts/Main";
+import MainLayout from "../../layouts/Main";
 import {
   Box,
   Flex,
@@ -23,9 +23,9 @@ import {
   FaCloud,
 } from "react-icons/fa";
 
-import laptopImage from "../assets/laptop_typing.jpg";
+import laptopImage from "../../assets/laptop_typing.jpg";
 
-export const Route = createFileRoute("/skills")({
+export const Route = createFileRoute("/portfolio/skills")({
   component: RouteComponent,
 });
 

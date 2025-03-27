@@ -10,11 +10,11 @@ import {
 } from "@chakra-ui/react";
 import { MdEmail, MdPhone } from "react-icons/md";
 
-import MainLayout from "../layouts/Main";
-import ContactImage from "../assets/contact_me.png";
-import { message, phoneNumber } from "../utils/contstants";
+import MainLayout from "../../layouts/Main";
+import ContactImage from "../../assets/contact_me.png";
+import { message, phoneNumber } from "../../utils/contstants";
 
-export const Route = createFileRoute("/contact")({
+export const Route = createFileRoute("/portfolio/contact")({
   component: RouteComponent,
 });
 

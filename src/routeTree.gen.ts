@@ -11,48 +11,48 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as VolunteeringImport } from './routes/volunteering'
-import { Route as SkillsImport } from './routes/skills'
-import { Route as ExperienceImport } from './routes/experience'
-import { Route as EducationImport } from './routes/education'
-import { Route as ContactImport } from './routes/contact'
-import { Route as IndexImport } from './routes/index'
+import { Route as PortfolioIndexImport } from './routes/portfolio/index'
+import { Route as PortfolioVolunteeringImport } from './routes/portfolio/volunteering'
+import { Route as PortfolioSkillsImport } from './routes/portfolio/skills'
+import { Route as PortfolioExperienceImport } from './routes/portfolio/experience'
+import { Route as PortfolioEducationImport } from './routes/portfolio/education'
+import { Route as PortfolioContactImport } from './routes/portfolio/contact'
 
 // Create/Update Routes
 
-const VolunteeringRoute = VolunteeringImport.update({
-  id: '/volunteering',
-  path: '/volunteering',
+const PortfolioIndexRoute = PortfolioIndexImport.update({
+  id: '/portfolio/',
+  path: '/portfolio/',
   getParentRoute: () => rootRoute,
 } as any)
 
-const SkillsRoute = SkillsImport.update({
-  id: '/skills',
-  path: '/skills',
+const PortfolioVolunteeringRoute = PortfolioVolunteeringImport.update({
+  id: '/portfolio/volunteering',
+  path: '/portfolio/volunteering',
   getParentRoute: () => rootRoute,
 } as any)
 
-const ExperienceRoute = ExperienceImport.update({
-  id: '/experience',
-  path: '/experience',
+const PortfolioSkillsRoute = PortfolioSkillsImport.update({
+  id: '/portfolio/skills',
+  path: '/portfolio/skills',
   getParentRoute: () => rootRoute,
 } as any)
 
-const EducationRoute = EducationImport.update({
-  id: '/education',
-  path: '/education',
+const PortfolioExperienceRoute = PortfolioExperienceImport.update({
+  id: '/portfolio/experience',
+  path: '/portfolio/experience',
   getParentRoute: () => rootRoute,
 } as any)
 
-const ContactRoute = ContactImport.update({
-  id: '/contact',
-  path: '/contact',
+const PortfolioEducationRoute = PortfolioEducationImport.update({
+  id: '/portfolio/education',
+  path: '/portfolio/education',
   getParentRoute: () => rootRoute,
 } as any)
 
-const IndexRoute = IndexImport.update({
-  id: '/',
-  path: '/',
+const PortfolioContactRoute = PortfolioContactImport.update({
+  id: '/portfolio/contact',
+  path: '/portfolio/contact',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -60,46 +60,46 @@ const IndexRoute = IndexImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+    '/portfolio/contact': {
+      id: '/portfolio/contact'
+      path: '/portfolio/contact'
+      fullPath: '/portfolio/contact'
+      preLoaderRoute: typeof PortfolioContactImport
       parentRoute: typeof rootRoute
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactImport
+    '/portfolio/education': {
+      id: '/portfolio/education'
+      path: '/portfolio/education'
+      fullPath: '/portfolio/education'
+      preLoaderRoute: typeof PortfolioEducationImport
       parentRoute: typeof rootRoute
     }
-    '/education': {
-      id: '/education'
-      path: '/education'
-      fullPath: '/education'
-      preLoaderRoute: typeof EducationImport
+    '/portfolio/experience': {
+      id: '/portfolio/experience'
+      path: '/portfolio/experience'
+      fullPath: '/portfolio/experience'
+      preLoaderRoute: typeof PortfolioExperienceImport
       parentRoute: typeof rootRoute
     }
-    '/experience': {
-      id: '/experience'
-      path: '/experience'
-      fullPath: '/experience'
-      preLoaderRoute: typeof ExperienceImport
+    '/portfolio/skills': {
+      id: '/portfolio/skills'
+      path: '/portfolio/skills'
+      fullPath: '/portfolio/skills'
+      preLoaderRoute: typeof PortfolioSkillsImport
       parentRoute: typeof rootRoute
     }
-    '/skills': {
-      id: '/skills'
-      path: '/skills'
-      fullPath: '/skills'
-      preLoaderRoute: typeof SkillsImport
+    '/portfolio/volunteering': {
+      id: '/portfolio/volunteering'
+      path: '/portfolio/volunteering'
+      fullPath: '/portfolio/volunteering'
+      preLoaderRoute: typeof PortfolioVolunteeringImport
       parentRoute: typeof rootRoute
     }
-    '/volunteering': {
-      id: '/volunteering'
-      path: '/volunteering'
-      fullPath: '/volunteering'
-      preLoaderRoute: typeof VolunteeringImport
+    '/portfolio/': {
+      id: '/portfolio/'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -108,77 +108,77 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
-  '/education': typeof EducationRoute
-  '/experience': typeof ExperienceRoute
-  '/skills': typeof SkillsRoute
-  '/volunteering': typeof VolunteeringRoute
+  '/portfolio/contact': typeof PortfolioContactRoute
+  '/portfolio/education': typeof PortfolioEducationRoute
+  '/portfolio/experience': typeof PortfolioExperienceRoute
+  '/portfolio/skills': typeof PortfolioSkillsRoute
+  '/portfolio/volunteering': typeof PortfolioVolunteeringRoute
+  '/portfolio': typeof PortfolioIndexRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
-  '/education': typeof EducationRoute
-  '/experience': typeof ExperienceRoute
-  '/skills': typeof SkillsRoute
-  '/volunteering': typeof VolunteeringRoute
+  '/portfolio/contact': typeof PortfolioContactRoute
+  '/portfolio/education': typeof PortfolioEducationRoute
+  '/portfolio/experience': typeof PortfolioExperienceRoute
+  '/portfolio/skills': typeof PortfolioSkillsRoute
+  '/portfolio/volunteering': typeof PortfolioVolunteeringRoute
+  '/portfolio': typeof PortfolioIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
-  '/education': typeof EducationRoute
-  '/experience': typeof ExperienceRoute
-  '/skills': typeof SkillsRoute
-  '/volunteering': typeof VolunteeringRoute
+  '/portfolio/contact': typeof PortfolioContactRoute
+  '/portfolio/education': typeof PortfolioEducationRoute
+  '/portfolio/experience': typeof PortfolioExperienceRoute
+  '/portfolio/skills': typeof PortfolioSkillsRoute
+  '/portfolio/volunteering': typeof PortfolioVolunteeringRoute
+  '/portfolio/': typeof PortfolioIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
-    | '/contact'
-    | '/education'
-    | '/experience'
-    | '/skills'
-    | '/volunteering'
+    | '/portfolio/contact'
+    | '/portfolio/education'
+    | '/portfolio/experience'
+    | '/portfolio/skills'
+    | '/portfolio/volunteering'
+    | '/portfolio'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
-    | '/contact'
-    | '/education'
-    | '/experience'
-    | '/skills'
-    | '/volunteering'
+    | '/portfolio/contact'
+    | '/portfolio/education'
+    | '/portfolio/experience'
+    | '/portfolio/skills'
+    | '/portfolio/volunteering'
+    | '/portfolio'
   id:
     | '__root__'
-    | '/'
-    | '/contact'
-    | '/education'
-    | '/experience'
-    | '/skills'
-    | '/volunteering'
+    | '/portfolio/contact'
+    | '/portfolio/education'
+    | '/portfolio/experience'
+    | '/portfolio/skills'
+    | '/portfolio/volunteering'
+    | '/portfolio/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ContactRoute: typeof ContactRoute
-  EducationRoute: typeof EducationRoute
-  ExperienceRoute: typeof ExperienceRoute
-  SkillsRoute: typeof SkillsRoute
-  VolunteeringRoute: typeof VolunteeringRoute
+  PortfolioContactRoute: typeof PortfolioContactRoute
+  PortfolioEducationRoute: typeof PortfolioEducationRoute
+  PortfolioExperienceRoute: typeof PortfolioExperienceRoute
+  PortfolioSkillsRoute: typeof PortfolioSkillsRoute
+  PortfolioVolunteeringRoute: typeof PortfolioVolunteeringRoute
+  PortfolioIndexRoute: typeof PortfolioIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  ContactRoute: ContactRoute,
-  EducationRoute: EducationRoute,
-  ExperienceRoute: ExperienceRoute,
-  SkillsRoute: SkillsRoute,
-  VolunteeringRoute: VolunteeringRoute,
+  PortfolioContactRoute: PortfolioContactRoute,
+  PortfolioEducationRoute: PortfolioEducationRoute,
+  PortfolioExperienceRoute: PortfolioExperienceRoute,
+  PortfolioSkillsRoute: PortfolioSkillsRoute,
+  PortfolioVolunteeringRoute: PortfolioVolunteeringRoute,
+  PortfolioIndexRoute: PortfolioIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -191,31 +191,31 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/",
-        "/contact",
-        "/education",
-        "/experience",
-        "/skills",
-        "/volunteering"
+        "/portfolio/contact",
+        "/portfolio/education",
+        "/portfolio/experience",
+        "/portfolio/skills",
+        "/portfolio/volunteering",
+        "/portfolio/"
       ]
     },
-    "/": {
-      "filePath": "index.tsx"
+    "/portfolio/contact": {
+      "filePath": "portfolio/contact.tsx"
     },
-    "/contact": {
-      "filePath": "contact.tsx"
+    "/portfolio/education": {
+      "filePath": "portfolio/education.tsx"
     },
-    "/education": {
-      "filePath": "education.tsx"
+    "/portfolio/experience": {
+      "filePath": "portfolio/experience.tsx"
     },
-    "/experience": {
-      "filePath": "experience.tsx"
+    "/portfolio/skills": {
+      "filePath": "portfolio/skills.tsx"
     },
-    "/skills": {
-      "filePath": "skills.tsx"
+    "/portfolio/volunteering": {
+      "filePath": "portfolio/volunteering.tsx"
     },
-    "/volunteering": {
-      "filePath": "volunteering.tsx"
+    "/portfolio/": {
+      "filePath": "portfolio/index.tsx"
     }
   }
 }
