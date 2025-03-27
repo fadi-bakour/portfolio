@@ -1,7 +1,7 @@
 "use client";
 
 import { createFileRoute } from "@tanstack/react-router";
-import MainLayout from "../layouts/main";
+import MainLayout from "../layouts/Main";
 import {
   Box,
   Flex,

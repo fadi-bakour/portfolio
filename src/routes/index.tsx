@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { FaMessage } from "react-icons/fa6";
 
-import MainLayout from "../layouts/main";
+import MainLayout from "../layouts/Main";
 import ProfilePic from "../assets/fadi_bakour_profile.jpeg";
 import { message, phoneNumber } from "../utils/contstants";
 

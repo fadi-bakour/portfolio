@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 import RecodeImage from "../assets/recode.jpeg";
-import MainLayout from "../layouts/main";
+import MainLayout from "../layouts/Main";
 
 export const Route = createFileRoute("/volunteering")({
   component: RouteComponent,

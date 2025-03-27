@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { MdEmail, MdPhone } from "react-icons/md";
 
-import MainLayout from "../layouts/main";
+import MainLayout from "../layouts/Main";
 import ContactImage from "../assets/contact_me.png";
 import { message, phoneNumber } from "../utils/contstants";
 
