@@ -44,12 +44,11 @@ function RouteComponent() {
                 mb={6}
                 color={"blue.500"}
               >
-                Contact Us
+                Contact Me
               </Heading>
               <Text fontSize="lg" mb={10} lineHeight="tall">
-                Not sure what you need? The team at Square Events will be happy
-                to listen to you and suggest event ideas you hadn&apos;t
-                considered
+                Not sure what you need? i am happy
+                to listen to you and suggest services to improve your digital print
               </Text>
 
               <Stack spacing={4} mt={8}>
